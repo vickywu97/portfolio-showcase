@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vicky Wu · AI 法律合规产品作品集</title>
+<style>
+  :root{
+    --navy:#1a2b4a; --navy-2:#24395f; --ink:#1f2933; --muted:#5b6b7f;
+    --line:#e4e8ee; --bg:#f6f8fb; --card:#ffffff; --accent:#8b2635;
+    --gold:#b8860b; --green:#1f7a4d; --blue:#2563a8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:980px;margin:0 auto;padding:0 22px;}
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:54px 0 46px;}
+  .hero .wrap{display:flex;flex-direction:column;gap:10px;}
+  .hero h1{font-size:30px;font-weight:700;letter-spacing:.5px;}
+  .hero .role{font-size:15px;color:#c7d2e2;}
+  .hero .tagline{font-size:16px;margin-top:6px;color:#eaf0f8;max-width:720px;}
+  .pill-row{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .pill{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+    padding:5px 12px;border-radius:999px;font-size:12.5px;color:#eaf0f8;}
+  .pill.strong{background:var(--accent);border-color:var(--accent);}
+  section{padding:38px 0 6px;}
+  h2{font-size:21px;color:var(--navy);margin-bottom:6px;position:relative;padding-left:14px;}
+  h2::before{content:"";position:absolute;left:0;top:6px;width:5px;height:18px;background:var(--accent);border-radius:2px;}
+  .lead{color:var(--muted);font-size:14.5px;margin:8px 0 18px;max-width:760px;}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0;}
+  .pillar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
+  .pillar h3{font-size:15.5px;color:var(--navy);margin-bottom:6px;}
+  .pillar p{font-size:13.5px;color:var(--muted);}
+  .pillar .num{font-size:12px;color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+  .cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;
+    box-shadow:0 1px 2px rgba(16,32,56,.04);}
+  .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;}
+  .card h3{font-size:17px;color:var(--navy);}
+  .card .sub{font-size:13px;color:var(--muted);margin-top:2px;}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+  .badge{font-size:11px;padding:3px 9px;border-radius:6px;font-weight:600;letter-spacing:.3px;}
+  .b-mit{background:#eef6ff;color:#2563a8;}
+  .b-ci{background:#e9f7ef;color:#1f7a4d;}
+  .b-py{background:#f3eefe;color:#6d28d9;}
+  .b-tests{background:#fff4e5;color:#b8860b;}
+  .card p.desc{font-size:13.5px;color:var(--ink);margin:12px 0 10px;}
+  .feat{margin:8px 0 12px;padding-left:0;list-style:none;}
+  .feat li{font-size:13px;color:var(--muted);padding:3px 0 3px 18px;position:relative;}
+  .feat li::before{content:"▸";position:absolute;left:0;color:var(--accent);}
+  .card .links{display:flex;gap:14px;font-size:13px;margin-top:4px;}
+  .blurb{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);
+    border-radius:10px;padding:20px 22px;margin-top:8px;}
+  .blurb h3{font-size:15px;color:var(--navy);margin-bottom:10px;}
+  .blurb p{font-size:14px;color:var(--ink);margin-bottom:10px;}
+  .blurb .copy{display:inline-block;margin-top:4px;font-size:12.5px;color:var(--blue);
+    border:1px solid var(--line);padding:6px 12px;border-radius:8px;}
+  .posture{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px;}
+  .pc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;}
+  .pc h4{font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+  .pc p{font-size:12.5px;color:var(--muted);}
+  .note{font-size:12.5px;color:var(--muted);background:#fbfcfe;border:1px dashed var(--line);
+    border-radius:10px;padding:14px 16px;margin-top:14px;}
+  .note b{color:var(--accent);}
+  footer{margin-top:40px;padding:26px 0 50px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;}
+  footer a{margin-right:18px;}
+  @media(max-width:680px){.two-col,.posture{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Vicky Wu · AI 法律合规产品作品集</h1>
+    <div class="role">律师 × 税务师 × 专利代理师　|　AI 法律合规产品（非转型 PM，现为实操产品）</div>
+    <div class="tagline">六年法律实务经验，把合规判断做成可运行、可解释、可进 CI 的开源工具 —— 帮互联网 / AI / 科技 / Web3 公司直接干活。</div>
+    <div class="pill-row">
+      <span class="pill strong">开源 MIT</span>
+      <span class="pill">离线优先 · 零依赖 Python</span>
+      <span class="pill">条文级可解释证据</span>
+      <span class="pill">CI 门禁就绪</span>
+      <span class="pill">国产模型合规基准</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>双支柱定位</h2>
+    <p class="lead">作品集分两条线：一条用基准量化「法律 AI 到底可不可靠」，一条用工具直接解决公司真实合规需求。前者是方法论背书，后者是生产力证据。</p>
+    <div class="two-col">
+      <div class="pillar">
+        <div class="num">Pillar 01 · 评测</div>
+        <h3>法律 AI 可靠性基准</h3>
+        <p>legal-hallucination-bench / legal-ai-watch / LCB 等，以陷阱题量化大模型在法律场景的幻觉、时效错误与张冠李戴，面向国产模型的落地可靠性。</p>
+      </div>
+      <div class="pillar">
+        <div class="num">Pillar 02 · 生产力</div>
+        <h3>合规判断工具（求职三件套）</h3>
+        <p>开源许可证合规、隐私政策体检、代币监管定性 —— 每个都带「法律判断内核 + 条文级可解释证据」，能进流水线当门禁，而不只是 demo。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>生产力型合规三件套</h2>
+    <p class="lead">三个独立开源仓库，均为零依赖 Python CLI、含 Markdown（法律）+ JSON（工程）双报告与双重免责。点链接直达 GitHub。</p>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h3>oss-license-checker</h3>
+            <div class="sub">开源许可证合规判定器 · 知产 / 开源法务</div>
+          </div>
+          <div class="badges">
+            <span class="badge b-ci">CI 绿</span>
+            <span class="badge b-py">Python 3.8+</span>
+            <span class="badge b-tests">32 tests</span>
+            <span class="badge b-mit">MIT</span>
+          </div>
+        </div>
+        <p class="desc">解析依赖与 LICENSE，逐条比对兼容矩阵，输出「法律判断内核 + 条文级证据」，并导出 CycloneDX SBOM（对应 EO 14028 / 欧盟 CRA 合规诉求）。</p>
+        <ul class="feat">
+          <li>四态兼容判定：compatible / incompatible / one-way / conditional，争议标 disputed</li>
+          <li>Apache-2.0 → MIT 等真实兼容关系，未收录默认 unknown（不静默放行）</li>
+          <li>--fail-on {high,medium,low} 非零退出码，可作流水线门禁</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/vickywu97/oss-license-checker" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h3>privacy-policy-checker</h3>
+            <div class="sub">隐私政策合规体检器 · AI / 数据合规法务</div>
+          </div>
+          <div class="badges">
+            <span class="badge b-ci">CI 绿</span>
+            <span class="badge b-py">Python 3.8+</span>
+            <span class="badge b-tests">19 tests</span>
+            <span class="badge b-mit">MIT</span>
+          </div>
+        </div>
+        <p class="desc">对照 PIPL / GDPR / CSL / DSL 检查项库，逐条判定 satisfied / partial / missing / not_applicable，并下沉到有效风险（none / low / medium / high）。</p>
+        <ul class="feat">
+          <li>中文双语对齐关键词、否定语境检测，避免对纯境内 / 非敏感产品误报</li>
+          <li>CSL（网络安全法）/ DSL（数据安全法）检查项库已上线，opt-in 启用</li>
+          <li>--fail-on {high,medium,low} 非零退出码，可作流水线门禁</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/vickywu97/privacy-policy-checker" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h3>token-classifier</h3>
+            <div class="sub">代币监管定性器 · Web3 / 加密公司法务</div>
+          </div>
+          <div class="badges">
+            <span class="badge b-ci">CI 绿</span>
+            <span class="badge b-py">Python 3.8+</span>
+            <span class="badge b-tests">37 tests</span>
+            <span class="badge b-mit">MIT</span>
+          </div>
+        </div>
+        <p class="desc">跨 HK SFC / SG MAS / US SEC / EU MiCA 四法域，对代币做证券 / 监管定性，输出 Howey 四要素逐条证据与 MiCA 分类结论。</p>
+        <ul class="feat">
+          <li>Howey 四要素逐条四态判定 + 综合证券定性（含置信度）</li>
+          <li>MiCA 四类：security(MiFID II) / EMT / ART / utility，判定优先级安全&gt;EMT&gt;ART&gt;utility</li>
+          <li>--fail-on {likely_security,possibly_security} 非零退出码，可作发行前门禁</li>
+        </ul>
+        <div class="links">
+          <a href="https://github.com/vickywu97/token-classifier" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>可直接复用的作品集文案</h2>
+    <div class="blurb">
+      <h3>一句话定位（中英）</h3>
+      <p>中文：律师 / 税务师 / 专利代理师，六年法律实务经验，专注把合规判断做成可运行、可解释、可进 CI 的开源工具，服务互联网、AI、科技与 Web3 公司的法务与合规需求。</p>
+      <p>English: Triple-qualified legal professional (attorney + tax agent + patent attorney) with six years of legal practice, building offline-first, explainable, CI-ready open-source compliance tooling for in-house legal, AI, tech, and Web3 teams.</p>
+      <h3 style="margin-top:14px;">LinkedIn / 脉脉 段落（可整段复制）</h3>
+      <p>我是一名兼具律师、税务师与专利代理师三重资质的合规法律人，有六年法律实务经验。我关注一个具体且紧迫的问题：法律与合规判断如何变得可验证、可解释、可自动化。为此我构建了一系列开源（MIT）工具 —— 从开源许可证合规判定、隐私政策体检（覆盖 PIPL / GDPR / 网络安全法 / 数据安全法），到跨 HK、新加坡、美国 SEC 与欧盟 MiCA 四法域的代币监管定性器。它们均采用零依赖的离线 Python、条文级可解释证据，并支持 --fail-on 门禁接入 CI。我相信好的法律 AI 产品应当先把「判断内核」做扎实，再谈智能化。</p>
+      <a class="copy" href="https://github.com/vickywu97/vickywu97" target="_blank" rel="noopener">查看完整作品集 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>工程与合规姿态</h2>
+    <div class="posture">
+      <div class="pc">
+        <h4>离线优先 · 零依赖</h4>
+        <p>仅用 Python 标准库，CI 矩阵 3.8 / 3.11 / 3.12 全通过，无供应链引入风险。</p>
+      </div>
+      <div class="pc">
+        <h4>条文级可解释</h4>
+        <p>每条结论附带法条依据与证据片段，而非黑箱标签；事实库带 source_url 与核验日期台账。</p>
+      </div>
+      <div class="pc">
+        <h4>CI 门禁就绪</h4>
+        <p>三件套均支持 --fail-on 非零退出码，可直接作为公司流水线的合规卡点。</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>合规与诚实声明：</b>本人系统研习并实践 GDPR 与欧盟数据保护框架（含 IAPP CIPP/E 知识体系），但<b>未持有</b> CIPP/E 等国际隐私认证；作品集中任何相关表述均为「研习 / 熟悉」而非「持证」。从业时长统一表述为「六年法律实务经验」，不写作「执业六年」。全部仓库开源 MIT，未声称私有或需授权访问。
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="https://github.com/vickywu97/vickywu97" target="_blank" rel="noopener">作品集主入口</a>
+    <a href="https://github.com/vickywu97/oss-license-checker" target="_blank" rel="noopener">oss-license-checker</a>
+    <a href="https://github.com/vickywu97/privacy-policy-checker" target="_blank" rel="noopener">privacy-policy-checker</a>
+    <a href="https://github.com/vickywu97/token-classifier" target="_blank" rel="noopener">token-classifier</a>
+    <div style="margin-top:12px;color:#9aa7b5;">© Vicky Wu (vickywu97) · 开源 MIT · 本页为作品集展示，不构成法律意见。</div>
+  </div>
+</footer>
+
+</body>
+</html>
